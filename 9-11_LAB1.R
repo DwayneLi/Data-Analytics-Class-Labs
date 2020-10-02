@@ -1,6 +1,8 @@
 setwd("C:/Users/donal/OneDrive/RPI/2020 Fall/Data Analytic")
 
 #####Exercises-getting data in####
+library(readr)
+
 df=read_csv("GPW3_GRUMP_SummaryInformation_2010.csv")
 View(df)
 
@@ -76,4 +78,14 @@ help(lines)
 lines(density(EPI,na.rm=TRUE,bw=1.)) 
 help(rug)
 rug(EPI) 
+
+EPI[!Desert]
+EPI_regions
+EPI_South_Asia=EPI[EPI_regions=="South Asia"]
+EPI_South_Asia
+hist(EPI_South_Asia)
+
+
+
+
 
